@@ -1,4 +1,4 @@
-HaxeSampleUsingSwfAndStarling
+HaxeSampleUsingGAF
 =============================
 Haxe sample using [Generic Animation Format(GAF)](http://gafmedia.com/)
 
