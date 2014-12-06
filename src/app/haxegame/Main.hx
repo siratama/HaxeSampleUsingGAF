@@ -1,5 +1,7 @@
 package haxegame;
 
+import haxegame.util.GAFMovieClipPack;
+import haxegame.util.GAFMovieClipPackCreator;
 import haxegame.util.GAFTimelineMap;
 import haxegame.zip.ZipAssetsName;
 import haxegame.zip.ZipConverter;
@@ -25,6 +27,7 @@ class Main
 	private var starlingRoot:Sprite;
 	private var gameLayer:Sprite;
 
+	private var layout:GAFMovieClipPack;
 	private var player:Player;
 
 	public static function main(){
@@ -94,7 +97,10 @@ class Main
 	}
 	private function initializeGame()
 	{
-		player = new Player(gameLayer);
+		layout = GAFMovieClipPackCreator.create(Main, ZipAssetsName.VIEW, "Layout");
+		var playerPosition = layout.movieClip.getChildByName("player");
+
+		player = new Player(gameLayer, playerPosition);
 	}
 
 	//
