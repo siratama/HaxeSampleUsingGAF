@@ -1,5 +1,6 @@
 package haxegame;
 
+import gaf.core.GAFTimelinesManager;
 import haxegame.util.GAFMovieClipPack;
 import haxegame.util.GAFMovieClipPackCreator;
 import haxegame.util.GAFTimelineMap;
@@ -83,6 +84,8 @@ class Main
 	//
 	private function initializeMain()
 	{
+		GAFTimelinesManager.addGAFBundle(zipConverter.converter.gafBundle);
+
 		GAFTimelineMap.getInstance().add(zipConverter.converter.gafBundle, ZipAssetsName.VIEW);
 		initializeLayer();
 		initializeGame();

@@ -1,0 +1,15 @@
+-swf deploy/test.swf
+-main haxegame.Test
+-swf-version 11
+-swf-header 500:500:24:ffffff
+-swf-lib lib/starling.swc
+-swf-lib lib/gaf.swc
+#-swf-lib lib/starling_4.2.swc
+#-swf-lib lib/gaf_4.2.swc
+#-swf-lib lib/feathers_4.2.swc
+--macro patchTypes('lib/starling.patch')
+#--macro patchTypes('lib/gaf.patch')
+-cp src/app
+-cp src/extern
+-debug
+-D fdb

@@ -1,7 +1,7 @@
 package haxegame.util;
 import starling.display.DisplayObjectContainer;
-import com.catalystapps.gaf.data.GAFTimeline;
-import com.catalystapps.gaf.display.GAFMovieClip;
+import gaf.data.GAFTimeline;
+import gaf.display.GAFMovieClip;
 class GAFMovieClipPack
 {
 	public var movieClip(default, null):GAFMovieClip;

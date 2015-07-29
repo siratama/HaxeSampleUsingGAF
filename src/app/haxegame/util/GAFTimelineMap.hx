@@ -1,9 +1,8 @@
 package haxegame.util;
 
 import haxegame.zip.ZipAssetsName;
-import com.catalystapps.gaf.data.GAFBundle;
-import com.catalystapps.gaf.data.GAFTimeline;
-import com.catalystapps.gaf.display.GAFMovieClip;
+import gaf.data.GAFBundle;
+import gaf.data.GAFTimeline;
 
 class GAFTimelineMap
 {

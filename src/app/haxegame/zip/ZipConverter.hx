@@ -2,7 +2,7 @@ package haxegame.zip;
 
 import flash.events.Event;
 import flash.utils.ByteArray;
-import com.catalystapps.gaf.core.ZipToGAFAssetConverter;
+import gaf.core.ZipToGAFAssetConverter;
 
 class ZipConverter
 {
