@@ -1,18 +1,15 @@
 package haxegame.player;
 
-import haxegame.util.GAFMovieClipPackCreator;
-import haxegame.util.GAFMovieClipPack;
-import haxegame.zip.ZipAssetsName;
+import haxegame.util.AbstractGAFMovieClip;
+import starling.textures.TextureSmoothing;
 import starling.display.DisplayObject;
 import starling.display.DisplayObjectContainer;
-import com.catalystapps.gaf.display.GAFMovieClip;
-import com.catalystapps.gaf.core.GAFTimelinesManager;
 
-using haxegame.util.GAFMovieClipPack;
+using haxegame.util.AbstractGAFMovieClip;
 
 class Player
 {
-	private var movieClip:GAFMovieClipPack;
+	private var abstractMovieClip:AbstractGAFMovieClip;
 	private var currentFrame:Int;
 	private var totalFrames:Int;
 	private var layer:DisplayObjectContainer;
@@ -21,27 +18,31 @@ class Player
 	{
 		this.layer = layer;
 
-		movieClip = GAFMovieClipPackCreator.create(Player, ZipAssetsName.VIEW, "WalkView", position);
-		movieClip.setScale(2, 2);
+		var walkViewMovieClip = new WalkViewMovieClip();
+		abstractMovieClip = new AbstractGAFMovieClip(walkViewMovieClip);
+		abstractMovieClip.setPosition(position);
+		abstractMovieClip.movieClip.smoothing = TextureSmoothing.NONE;
+
+		abstractMovieClip.setScale(2, 2);
 	}
 	public function initialize()
 	{
-		movieClip.gotoFirstFrame();
+		abstractMovieClip.gotoFirstFrame();
 	}
 	public function show()
 	{
-		layer.add(movieClip);
+		layer.add(abstractMovieClip);
 	}
 	public function run()
 	{
-		movieClip.loopFrame();
+		abstractMovieClip.loopFrame();
 	}
 	public function draw()
 	{
-		movieClip.draw();
+		abstractMovieClip.draw();
 	}
 	public function hide()
 	{
-		layer.remove(movieClip);
+		layer.remove(abstractMovieClip);
 	}
 }

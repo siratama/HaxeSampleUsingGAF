@@ -1,0 +1,48 @@
+package feathers.controls.supportClasses;
+
+extern class GroupedListDataViewPort extends feathers.core.FeathersControl implements IViewPort {
+	var contentX(default,never) : Float;
+	var contentY(default,never) : Float;
+	var customFirstItemRendererStyleName : String;
+	var customFooterRendererStyleName : String;
+	var customHeaderRendererStyleName : String;
+	var customItemRendererStyleName : String;
+	var customLastItemRendererStyleName : String;
+	var customSingleItemRendererStyleName : String;
+	var dataProvider : feathers.data.HierarchicalCollection;
+	var firstItemRendererFactory : Dynamic;
+	var firstItemRendererType : Class<Dynamic>;
+	var footerRendererFactory : Dynamic;
+	var footerRendererProperties : feathers.core.PropertyProxy;
+	var footerRendererType : Class<Dynamic>;
+	var headerRendererFactory : Dynamic;
+	var headerRendererProperties : feathers.core.PropertyProxy;
+	var headerRendererType : Class<Dynamic>;
+	var horizontalScrollPosition : Float;
+	var horizontalScrollStep(default,never) : Float;
+	var isSelectable : Bool;
+	var itemRendererFactory : Dynamic;
+	var itemRendererProperties : feathers.core.PropertyProxy;
+	var itemRendererType : Class<Dynamic>;
+	var lastItemRendererFactory : Dynamic;
+	var lastItemRendererType : Class<Dynamic>;
+	var layout : feathers.layout.ILayout;
+	var maxVisibleHeight : Float;
+	var maxVisibleWidth : Float;
+	var minVisibleHeight : Float;
+	var minVisibleWidth : Float;
+	var owner : feathers.controls.GroupedList;
+	var selectedGroupIndex(default,never) : Int;
+	var selectedItemIndex(default,never) : Int;
+	var singleItemRendererFactory : Dynamic;
+	var singleItemRendererType : Class<Dynamic>;
+	var typicalItem : Dynamic;
+	var verticalScrollPosition : Float;
+	var verticalScrollStep(default,never) : Float;
+	var visibleHeight : Float;
+	var visibleWidth : Float;
+	function new() : Void;
+	function getNearestScrollPositionForIndex(p1 : Int, p2 : Int, ?p3 : flash.geom.Point) : flash.geom.Point;
+	function getScrollPositionForIndex(p1 : Int, p2 : Int, ?p3 : flash.geom.Point) : flash.geom.Point;
+	function setSelectedLocation(p1 : Int, p2 : Int) : Void;
+}

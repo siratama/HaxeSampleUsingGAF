@@ -2,11 +2,12 @@
 -main haxegame.Main
 -swf-version 11
 -swf-header 500:500:24:ffffff
--swf-lib lib/starling.swc
+-swf-lib lib/starling/starling.swc
+-swf-lib lib/feathers/feathers.swc
 -swf-lib lib/gaf.swc
---macro patchTypes('lib/starling.patch')
---macro patchTypes('lib/gaf.patch')
+--macro patchTypes('lib/starling/starling.patch')
 -cp src/app
--cp src/flash
+-cp src/extern
+-cp src/extern_fla/gafmedia
 -debug
 -D fdb

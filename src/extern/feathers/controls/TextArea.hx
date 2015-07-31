@@ -1,0 +1,40 @@
+package feathers.controls;
+
+extern class TextArea extends Scroller implements feathers.core.INativeFocusOwner {
+	var backgroundFocusedSkin : starling.display.DisplayObject;
+	var currentState : String;
+	var hasFocus(default,never) : Bool;
+	var isEditable : Bool;
+	var maxChars : Int;
+	var nativeFocus(default,never) : flash.display.InteractiveObject;
+	var restrict : String;
+	var stateNames(default,never) : flash.Vector<String>;
+	var stateToSkinFunction : Dynamic;
+	var text : String;
+	var textEditorFactory : Dynamic;
+	var textEditorProperties : Dynamic;
+	function new() : Void;
+	function clearFocus() : Void;
+	function selectRange(p1 : Int, p2 : Int = -1) : Void;
+	function setFocus() : Void;
+	static var DECELERATION_RATE_FAST : Float;
+	static var DECELERATION_RATE_NORMAL : Float;
+	static var INTERACTION_MODE_MOUSE : String;
+	static var INTERACTION_MODE_TOUCH : String;
+	static var INTERACTION_MODE_TOUCH_AND_SCROLL_BARS : String;
+	static var MOUSE_WHEEL_SCROLL_DIRECTION_HORIZONTAL : String;
+	static var MOUSE_WHEEL_SCROLL_DIRECTION_VERTICAL : String;
+	static var SCROLL_BAR_DISPLAY_MODE_FIXED : String;
+	static var SCROLL_BAR_DISPLAY_MODE_FIXED_FLOAT : String;
+	static var SCROLL_BAR_DISPLAY_MODE_FLOAT : String;
+	static var SCROLL_BAR_DISPLAY_MODE_NONE : String;
+	static var SCROLL_POLICY_AUTO : String;
+	static var SCROLL_POLICY_OFF : String;
+	static var SCROLL_POLICY_ON : String;
+	static var STATE_DISABLED : String;
+	static var STATE_ENABLED : String;
+	static var STATE_FOCUSED : String;
+	static var VERTICAL_SCROLL_BAR_POSITION_LEFT : String;
+	static var VERTICAL_SCROLL_BAR_POSITION_RIGHT : String;
+	static var globalStyleProvider : feathers.skins.IStyleProvider;
+}

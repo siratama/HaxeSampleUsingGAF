@@ -1,9 +1,7 @@
 package haxegame;
 
-import gaf.core.GAFTimelinesManager;
-import haxegame.util.GAFMovieClipPack;
-import haxegame.util.GAFMovieClipPackCreator;
-import haxegame.util.GAFTimelineMap;
+import com.catalystapps.gaf.core.GAFTimelinesManager;
+import haxegame.util.AbstractGAFMovieClip;
 import haxegame.zip.ZipAssetsName;
 import haxegame.zip.ZipConverter;
 import haxegame.zip.ZipLoader;
@@ -11,9 +9,8 @@ import haxegame.player.Player;
 import starling.core.Starling;
 import starling.display.Sprite;
 import flash.display.MovieClip;
-import flash.events.Event;
-import flash.Lib;
 import flash.display.Stage;
+import flash.events.Event;
 
 class Main
 {
@@ -22,13 +19,13 @@ class Main
 	private var mainFunction:Void->Void;
 	private var starlingWorld:Starling;
 
-	private var zipLoader:ZipLoader;
-	private var zipConverter:ZipConverter;
-
 	private var starlingRoot:Sprite;
 	private var gameLayer:Sprite;
 
-	private var layout:GAFMovieClipPack;
+	private var zipLoader:ZipLoader;
+	private var zipConverter:ZipConverter;
+
+	private var layout:AbstractGAFMovieClip;
 	private var player:Player;
 
 	public static function main(){
@@ -67,26 +64,29 @@ class Main
 	}
 	private function loadZip()
 	{
-		if(!zipLoader.loaded) return;
-		zipLoader.destroy();
-
-		zipConverter = new ZipConverter(zipLoader.loader.data);
-		mainFunction = convertZip;
+		switch(zipLoader.getEvent()){
+			case ZipLoaderEvent.NONE: return;
+			case ZipLoaderEvent.COMPLETED(loadedData):
+				zipLoader.destroy();
+				zipConverter = new ZipConverter(loadedData);
+				mainFunction = convertZip;
+		}
 	}
 	private function convertZip()
 	{
-		if(!zipConverter.converted) return;
-		zipConverter.destroy();
-
-		initializeMain();
+		switch(zipConverter.getEvent())
+		{
+			case ZipConverterEvent.NONE: return;
+			case ZipConverterEvent.COMPLETED(gafBundle):
+				zipConverter.destroy();
+				GAFTimelinesManager.addGAFBundle(gafBundle);
+				initializeMain();
+		}
 	}
 
 	//
 	private function initializeMain()
 	{
-		GAFTimelinesManager.addGAFBundle(zipConverter.converter.gafBundle);
-
-		GAFTimelineMap.getInstance().add(zipConverter.converter.gafBundle, ZipAssetsName.VIEW);
 		initializeLayer();
 		initializeGame();
 
@@ -100,10 +100,10 @@ class Main
 	}
 	private function initializeGame()
 	{
-		layout = GAFMovieClipPackCreator.create(Main, ZipAssetsName.VIEW, "Layout");
-		var playerPosition = layout.movieClip.getChildByName("player");
+		var layoutSprite = new LayoutSprite();
+		layout = new AbstractGAFMovieClip(layoutSprite);
 
-		player = new Player(gameLayer, playerPosition);
+		player = new Player(gameLayer, layoutSprite.player);
 	}
 
 	//
@@ -118,5 +118,4 @@ class Main
 		player.draw();
 	}
 }
-
 
