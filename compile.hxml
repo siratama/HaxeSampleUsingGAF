@@ -8,6 +8,6 @@
 --macro patchTypes('lib/starling/starling.patch')
 -cp src/app
 -cp src/extern
--cp src/extern_fla/gafmedia
+-cp src/extern_fla/gaf
 -debug
 -D fdb

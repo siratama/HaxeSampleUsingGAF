@@ -1,10 +1,12 @@
-package haxegame.player;
+package haxegame.etc;
 import com.catalystapps.gaf.display.GAFMovieClip;
 import com.catalystapps.gaf.core.GAFTimelinesManager;
-
-abstract WalkViewMovieClip(GAFMovieClip){
+abstract MovingSquareMovieClip(GAFMovieClip){
     public function new()
-		this = GAFTimelinesManager.getGAFMovieClip("view", "haxegame.player.WalkViewMovieClip");
+        this = GAFTimelinesManager.getGAFMovieClip('view', 'haxegame.etc.MovingSquareMovieClip');
     @:to public function getInstance():GAFMovieClip
         return this;
+
+
+
 }

@@ -104,6 +104,16 @@ class Main
 		layout = new AbstractGAFMovieClip(layoutSprite);
 
 		player = new Player(gameLayer, layoutSprite.player);
+
+		trace(layoutSprite.testTextField);
+		trace(layoutSprite.testInputTextField);
+		trace(layoutSprite.movingSquare);
+		trace(layoutSprite.etcScene);
+		trace(layoutSprite.empty);
+		trace(layoutSprite.emptyNoFrame);
+		trace(layoutSprite.etcScene.square);
+		trace(layoutSprite.etcScene.player);
+		trace(layoutSprite.etcScene.squareNest.square);
 	}
 
 	//
