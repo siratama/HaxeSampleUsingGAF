@@ -16,21 +16,21 @@ class AbstractGAFMovieClip
 		currentFrame = FIRST_FRAME;
 		totalFrames = movieClip.totalFrames;
 	}
-	public function addChild(layer:DisplayObjectContainer)
+	public function addChildTo(layer:DisplayObjectContainer)
 	{
 		layer.addChild(movieClip);
 	}
 	public static function add(layer:DisplayObjectContainer, abstractGAFMovieClip:AbstractGAFMovieClip)
 	{
-		abstractGAFMovieClip.addChild(layer);
+		abstractGAFMovieClip.addChildTo(layer);
 	}
-	public function removeChild(layer:DisplayObjectContainer)
+	public function removeChildTo(layer:DisplayObjectContainer)
 	{
 		layer.removeChild(movieClip);
 	}
 	public static function remove(layer:DisplayObjectContainer, abstractGAFMovieClip:AbstractGAFMovieClip)
 	{
-		abstractGAFMovieClip.removeChild(layer);
+		abstractGAFMovieClip.removeChildTo(layer);
 	}
 	public function gotoFirstFrame()
 	{
