@@ -19,5 +19,13 @@ extern class ToggleButton extends Button implements feathers.core.IToggle {
 	var selectedUpLabelProperties : Dynamic;
 	var selectedUpSkin : starling.display.DisplayObject;
 	function new() : Void;
+	static var STATE_DISABLED : String;
+	static var STATE_DISABLED_AND_SELECTED : String;
+	static var STATE_DOWN : String;
+	static var STATE_DOWN_AND_SELECTED : String;
+	static var STATE_HOVER : String;
+	static var STATE_HOVER_AND_SELECTED : String;
+	static var STATE_UP : String;
+	static var STATE_UP_AND_SELECTED : String;
 	static var globalStyleProvider : feathers.skins.IStyleProvider;
 }

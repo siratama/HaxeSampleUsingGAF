@@ -23,6 +23,14 @@ extern class DefaultGroupedListItemRenderer extends BaseDefaultItemRenderer impl
 	static var ICON_POSITION_TOP : String;
 	static var LAYOUT_ORDER_LABEL_ACCESSORY_ICON : String;
 	static var LAYOUT_ORDER_LABEL_ICON_ACCESSORY : String;
+	static var STATE_DISABLED : String;
+	static var STATE_DISABLED_AND_SELECTED : String;
+	static var STATE_DOWN : String;
+	static var STATE_DOWN_AND_SELECTED : String;
+	static var STATE_HOVER : String;
+	static var STATE_HOVER_AND_SELECTED : String;
+	static var STATE_UP : String;
+	static var STATE_UP_AND_SELECTED : String;
 	static var VERTICAL_ALIGN_BOTTOM : String;
 	static var VERTICAL_ALIGN_MIDDLE : String;
 	static var VERTICAL_ALIGN_TOP : String;

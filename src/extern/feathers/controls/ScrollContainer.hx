@@ -18,7 +18,6 @@ extern class ScrollContainer extends Scroller implements feathers.core.IFocusCon
 	function sortRawChildren(p1 : flash.utils.Function) : Void;
 	function swapRawChildren(p1 : starling.display.DisplayObject, p2 : starling.display.DisplayObject) : Void;
 	function swapRawChildrenAt(p1 : Int, p2 : Int) : Void;
-	static var ALTERNATE_NAME_TOOLBAR : String;
 	static var ALTERNATE_STYLE_NAME_TOOLBAR : String;
 	static var AUTO_SIZE_MODE_CONTENT : String;
 	static var AUTO_SIZE_MODE_STAGE : String;

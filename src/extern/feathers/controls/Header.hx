@@ -4,9 +4,9 @@ extern class Header extends feathers.core.FeathersControl {
 	var backgroundDisabledSkin : starling.display.DisplayObject;
 	var backgroundSkin : starling.display.DisplayObject;
 	var centerItems : flash.Vector<starling.display.DisplayObject>;
+	var customTitleStyleName : String;
 	var disposeItems : Bool;
 	var gap : Float;
-	var itemName : String;
 	var leftItems : flash.Vector<starling.display.DisplayObject>;
 	var padding : Float;
 	var paddingBottom : Float;
@@ -18,13 +18,10 @@ extern class Header extends feathers.core.FeathersControl {
 	var titleAlign : String;
 	var titleFactory : Dynamic;
 	var titleGap : Float;
-	var titleName : String;
 	var titleProperties : Dynamic;
 	var useExtraPaddingForOSStatusBar : Bool;
 	var verticalAlign : String;
 	function new() : Void;
-	static var DEFAULT_CHILD_NAME_ITEM : String;
-	static var DEFAULT_CHILD_NAME_TITLE : String;
 	static var DEFAULT_CHILD_STYLE_NAME_ITEM : String;
 	static var DEFAULT_CHILD_STYLE_NAME_TITLE : String;
 	static var TITLE_ALIGN_CENTER : String;

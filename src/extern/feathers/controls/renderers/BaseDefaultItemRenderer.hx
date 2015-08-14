@@ -7,7 +7,6 @@ extern class BaseDefaultItemRenderer extends feathers.controls.ToggleButton impl
 	var accessoryLabelFactory : Dynamic;
 	var accessoryLabelField : String;
 	var accessoryLabelFunction : Dynamic;
-	var accessoryLabelName : String;
 	var accessoryLabelProperties : Dynamic;
 	var accessoryLoaderFactory : Dynamic;
 	var accessoryOffsetX : Float;
@@ -24,7 +23,6 @@ extern class BaseDefaultItemRenderer extends feathers.controls.ToggleButton impl
 	var iconLabelFactory : Dynamic;
 	var iconLabelField : String;
 	var iconLabelFunction : Dynamic;
-	var iconLabelName : String;
 	var iconLabelProperties : Dynamic;
 	var iconLoaderFactory : Dynamic;
 	var iconSourceField : String;
@@ -57,10 +55,9 @@ extern class BaseDefaultItemRenderer extends feathers.controls.ToggleButton impl
 	static var ACCESSORY_POSITION_MANUAL : String;
 	static var ACCESSORY_POSITION_RIGHT : String;
 	static var ACCESSORY_POSITION_TOP : String;
-	static var DEFAULT_CHILD_NAME_ACCESSORY_LABEL : String;
-	static var DEFAULT_CHILD_NAME_ICON_LABEL : String;
 	static var DEFAULT_CHILD_STYLE_NAME_ACCESSORY_LABEL : String;
 	static var DEFAULT_CHILD_STYLE_NAME_ICON_LABEL : String;
+	static var DEFAULT_CHILD_STYLE_NAME_LABEL : String;
 	static var HORIZONTAL_ALIGN_CENTER : String;
 	static var HORIZONTAL_ALIGN_LEFT : String;
 	static var HORIZONTAL_ALIGN_RIGHT : String;
@@ -73,6 +70,14 @@ extern class BaseDefaultItemRenderer extends feathers.controls.ToggleButton impl
 	static var ICON_POSITION_TOP : String;
 	static var LAYOUT_ORDER_LABEL_ACCESSORY_ICON : String;
 	static var LAYOUT_ORDER_LABEL_ICON_ACCESSORY : String;
+	static var STATE_DISABLED : String;
+	static var STATE_DISABLED_AND_SELECTED : String;
+	static var STATE_DOWN : String;
+	static var STATE_DOWN_AND_SELECTED : String;
+	static var STATE_HOVER : String;
+	static var STATE_HOVER_AND_SELECTED : String;
+	static var STATE_UP : String;
+	static var STATE_UP_AND_SELECTED : String;
 	static var VERTICAL_ALIGN_BOTTOM : String;
 	static var VERTICAL_ALIGN_MIDDLE : String;
 	static var VERTICAL_ALIGN_TOP : String;

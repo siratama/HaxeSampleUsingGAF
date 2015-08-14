@@ -1,6 +1,6 @@
 package feathers.controls.renderers;
 
-extern class DefaultGroupedListHeaderOrFooterRenderer extends feathers.core.FeathersControl implements IGroupedListHeaderOrFooterRenderer {
+extern class DefaultGroupedListHeaderOrFooterRenderer extends feathers.core.FeathersControl implements IGroupedListFooterRenderer implements IGroupedListHeaderRenderer {
 	var backgroundDisabledSkin : starling.display.DisplayObject;
 	var backgroundSkin : starling.display.DisplayObject;
 	var contentField : String;
@@ -8,11 +8,11 @@ extern class DefaultGroupedListHeaderOrFooterRenderer extends feathers.core.Feat
 	var contentLabelFactory : Dynamic;
 	var contentLabelField : String;
 	var contentLabelFunction : Dynamic;
-	var contentLabelName : String;
 	var contentLabelProperties : Dynamic;
 	var contentLoaderFactory : Dynamic;
 	var contentSourceField : String;
 	var contentSourceFunction : Dynamic;
+	var customContentLabelStyleName : String;
 	var data : Dynamic;
 	var groupIndex : Int;
 	var horizontalAlign : String;
@@ -25,7 +25,6 @@ extern class DefaultGroupedListHeaderOrFooterRenderer extends feathers.core.Feat
 	var paddingTop : Float;
 	var verticalAlign : String;
 	function new() : Void;
-	static var DEFAULT_CHILD_NAME_CONTENT_LABEL : String;
 	static var DEFAULT_CHILD_STYLE_NAME_CONTENT_LABEL : String;
 	static var HORIZONTAL_ALIGN_CENTER : String;
 	static var HORIZONTAL_ALIGN_JUSTIFY : String;

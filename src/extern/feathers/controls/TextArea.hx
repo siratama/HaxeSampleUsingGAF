@@ -1,8 +1,9 @@
 package feathers.controls;
 
-extern class TextArea extends Scroller implements feathers.core.INativeFocusOwner {
+extern class TextArea extends Scroller implements feathers.core.IStateContext implements feathers.core.INativeFocusOwner {
 	var backgroundFocusedSkin : starling.display.DisplayObject;
-	var currentState : String;
+	var currentState(default,never) : String;
+	var customTextEditorStyleName : String;
 	var hasFocus(default,never) : Bool;
 	var isEditable : Bool;
 	var maxChars : Int;
@@ -19,6 +20,7 @@ extern class TextArea extends Scroller implements feathers.core.INativeFocusOwne
 	function setFocus() : Void;
 	static var DECELERATION_RATE_FAST : Float;
 	static var DECELERATION_RATE_NORMAL : Float;
+	static var DEFAULT_CHILD_STYLE_NAME_TEXT_EDITOR : String;
 	static var INTERACTION_MODE_MOUSE : String;
 	static var INTERACTION_MODE_TOUCH : String;
 	static var INTERACTION_MODE_TOUCH_AND_SCROLL_BARS : String;

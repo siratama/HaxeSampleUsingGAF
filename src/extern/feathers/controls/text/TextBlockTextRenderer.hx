@@ -1,6 +1,6 @@
 package feathers.controls.text;
 
-extern class TextBlockTextRenderer extends feathers.core.FeathersControl implements feathers.core.ITextRenderer {
+extern class TextBlockTextRenderer extends feathers.core.FeathersControl implements feathers.core.IStateObserver implements feathers.core.ITextRenderer {
 	var applyNonLinearFontScaling : Bool;
 	var baseline(default,never) : Float;
 	var baselineFontDescription : flash.text.engine.FontDescription;
@@ -14,7 +14,9 @@ extern class TextBlockTextRenderer extends feathers.core.FeathersControl impleme
 	var lineRotation : String;
 	var maxTextureDimensions : Int;
 	var nativeFilters : Array<Dynamic>;
+	var selectedElementFormat : flash.text.engine.ElementFormat;
 	var snapToPixels : Bool;
+	var stateContext : feathers.core.IStateContext;
 	var tabStops : flash.Vector<flash.text.engine.TabStop>;
 	var text : String;
 	var textAlign : String;
@@ -26,6 +28,7 @@ extern class TextBlockTextRenderer extends feathers.core.FeathersControl impleme
 	var wordWrap : Bool;
 	function new() : Void;
 	function measureText(?p1 : flash.geom.Point) : flash.geom.Point;
+	function setElementFormatForState(p1 : String, p2 : flash.text.engine.ElementFormat) : Void;
 	static var TEXT_ALIGN_CENTER : String;
 	static var TEXT_ALIGN_LEFT : String;
 	static var TEXT_ALIGN_RIGHT : String;

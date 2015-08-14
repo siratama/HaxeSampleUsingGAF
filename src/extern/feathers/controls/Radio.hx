@@ -3,6 +3,7 @@ package feathers.controls;
 extern class Radio extends ToggleButton implements feathers.core.IGroupedToggle {
 	var toggleGroup : feathers.core.ToggleGroup;
 	function new() : Void;
+	static var DEFAULT_CHILD_STYLE_NAME_LABEL : String;
 	static var HORIZONTAL_ALIGN_CENTER : String;
 	static var HORIZONTAL_ALIGN_LEFT : String;
 	static var HORIZONTAL_ALIGN_RIGHT : String;
@@ -14,9 +15,13 @@ extern class Radio extends ToggleButton implements feathers.core.IGroupedToggle 
 	static var ICON_POSITION_RIGHT_BASELINE : String;
 	static var ICON_POSITION_TOP : String;
 	static var STATE_DISABLED : String;
+	static var STATE_DISABLED_AND_SELECTED : String;
 	static var STATE_DOWN : String;
+	static var STATE_DOWN_AND_SELECTED : String;
 	static var STATE_HOVER : String;
+	static var STATE_HOVER_AND_SELECTED : String;
 	static var STATE_UP : String;
+	static var STATE_UP_AND_SELECTED : String;
 	static var VERTICAL_ALIGN_BOTTOM : String;
 	static var VERTICAL_ALIGN_MIDDLE : String;
 	static var VERTICAL_ALIGN_TOP : String;

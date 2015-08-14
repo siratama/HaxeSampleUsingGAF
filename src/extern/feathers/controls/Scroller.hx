@@ -5,9 +5,7 @@ extern class Scroller extends feathers.core.FeathersControl implements feathers.
 	var backgroundDisabledSkin : starling.display.DisplayObject;
 	var backgroundSkin : starling.display.DisplayObject;
 	var clipContent : Bool;
-	var customHorizontalScrollBarName : String;
 	var customHorizontalScrollBarStyleName : String;
-	var customVerticalScrollBarName : String;
 	var customVerticalScrollBarStyleName : String;
 	var decelerationRate : Float;
 	var elasticSnapDuration : Float;
@@ -18,7 +16,6 @@ extern class Scroller extends feathers.core.FeathersControl implements feathers.
 	var horizontalPageCount(default,never) : Int;
 	var horizontalPageIndex(default,never) : Int;
 	var horizontalScrollBarFactory : Dynamic;
-	var horizontalScrollBarName : String;
 	var horizontalScrollBarProperties : Dynamic;
 	var horizontalScrollPolicy : String;
 	var horizontalScrollPosition : Float;
@@ -58,7 +55,6 @@ extern class Scroller extends feathers.core.FeathersControl implements feathers.
 	var verticalPageCount(default,never) : Int;
 	var verticalPageIndex(default,never) : Int;
 	var verticalScrollBarFactory : Dynamic;
-	var verticalScrollBarName : String;
 	var verticalScrollBarPosition : String;
 	var verticalScrollBarProperties : Dynamic;
 	var verticalScrollPolicy : String;
@@ -72,8 +68,6 @@ extern class Scroller extends feathers.core.FeathersControl implements feathers.
 	function stopScrolling() : Void;
 	static var DECELERATION_RATE_FAST : Float;
 	static var DECELERATION_RATE_NORMAL : Float;
-	static var DEFAULT_CHILD_NAME_HORIZONTAL_SCROLL_BAR : String;
-	static var DEFAULT_CHILD_NAME_VERTICAL_SCROLL_BAR : String;
 	static var DEFAULT_CHILD_STYLE_NAME_HORIZONTAL_SCROLL_BAR : String;
 	static var DEFAULT_CHILD_STYLE_NAME_VERTICAL_SCROLL_BAR : String;
 	static var INTERACTION_MODE_MOUSE : String;

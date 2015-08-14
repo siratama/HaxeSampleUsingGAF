@@ -1,7 +1,9 @@
 package feathers.controls;
 
-extern class Button extends feathers.core.FeathersControl implements feathers.core.IFocusDisplayObject {
-	var currentState : String;
+extern class Button extends feathers.core.FeathersControl implements feathers.core.ITextBaselineControl implements feathers.core.IStateContext implements feathers.core.IFocusDisplayObject {
+	var baseline(default,never) : Float;
+	var currentState(default,never) : String;
+	var customLabelStyleName : String;
 	var defaultIcon : starling.display.DisplayObject;
 	var defaultLabelProperties : Dynamic;
 	var defaultSkin : starling.display.DisplayObject;
@@ -24,7 +26,6 @@ extern class Button extends feathers.core.FeathersControl implements feathers.co
 	var keepDownStateOnRollOut : Bool;
 	var label : String;
 	var labelFactory : Dynamic;
-	var labelName : String;
 	var labelOffsetX : Float;
 	var labelOffsetY : Float;
 	var longPressDuration : Float;
@@ -45,17 +46,11 @@ extern class Button extends feathers.core.FeathersControl implements feathers.co
 	var upSkin : starling.display.DisplayObject;
 	var verticalAlign : String;
 	function new() : Void;
-	static var ALTERNATE_NAME_BACK_BUTTON : String;
-	static var ALTERNATE_NAME_CALL_TO_ACTION_BUTTON : String;
-	static var ALTERNATE_NAME_DANGER_BUTTON : String;
-	static var ALTERNATE_NAME_FORWARD_BUTTON : String;
-	static var ALTERNATE_NAME_QUIET_BUTTON : String;
 	static var ALTERNATE_STYLE_NAME_BACK_BUTTON : String;
 	static var ALTERNATE_STYLE_NAME_CALL_TO_ACTION_BUTTON : String;
 	static var ALTERNATE_STYLE_NAME_DANGER_BUTTON : String;
 	static var ALTERNATE_STYLE_NAME_FORWARD_BUTTON : String;
 	static var ALTERNATE_STYLE_NAME_QUIET_BUTTON : String;
-	static var DEFAULT_CHILD_NAME_LABEL : String;
 	static var DEFAULT_CHILD_STYLE_NAME_LABEL : String;
 	static var HORIZONTAL_ALIGN_CENTER : String;
 	static var HORIZONTAL_ALIGN_LEFT : String;

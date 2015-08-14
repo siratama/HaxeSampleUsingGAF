@@ -21,5 +21,6 @@ extern class ListCollection extends starling.events.EventDispatcher {
 	function setItemAt(p1 : flash.utils.Object, p2 : Int) : Void;
 	function shift() : flash.utils.Object;
 	function unshift(p1 : flash.utils.Object) : Void;
+	function updateAll() : Void;
 	function updateItemAt(p1 : Int) : Void;
 }

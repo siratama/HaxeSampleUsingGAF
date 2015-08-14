@@ -1,26 +1,21 @@
 package feathers.controls;
 
 extern class ButtonGroup extends feathers.core.FeathersControl {
+	var baseline(default,never) : Float;
 	var buttonFactory : Dynamic;
 	var buttonInitializer : Dynamic;
-	var buttonName : String;
 	var buttonProperties : Dynamic;
-	var customButtonName : String;
 	var customButtonStyleName : String;
-	var customFirstButtonName : String;
 	var customFirstButtonStyleName : String;
-	var customLastButtonName : String;
 	var customLastButtonStyleName : String;
 	var dataProvider : feathers.data.ListCollection;
 	var direction : String;
 	var distributeButtonSizes : Bool;
 	var firstButtonFactory : Dynamic;
-	var firstButtonName : String;
 	var firstGap : Float;
 	var gap : Float;
 	var horizontalAlign : String;
 	var lastButtonFactory : Dynamic;
-	var lastButtonName : String;
 	var lastGap : Float;
 	var padding : Float;
 	var paddingBottom : Float;
@@ -29,7 +24,6 @@ extern class ButtonGroup extends feathers.core.FeathersControl {
 	var paddingTop : Float;
 	var verticalAlign : String;
 	function new() : Void;
-	static var DEFAULT_CHILD_NAME_BUTTON : String;
 	static var DEFAULT_CHILD_STYLE_NAME_BUTTON : String;
 	static var DIRECTION_HORIZONTAL : String;
 	static var DIRECTION_VERTICAL : String;

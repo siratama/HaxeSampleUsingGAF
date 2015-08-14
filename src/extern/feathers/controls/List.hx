@@ -7,7 +7,6 @@ extern class List extends Scroller implements feathers.core.IFocusContainer {
 	var isChildFocusEnabled : Bool;
 	var isSelectable : Bool;
 	var itemRendererFactory : Dynamic;
-	var itemRendererName : String;
 	var itemRendererProperties : Dynamic;
 	var itemRendererType : Class<Dynamic>;
 	var keyScrollDuration : Float;

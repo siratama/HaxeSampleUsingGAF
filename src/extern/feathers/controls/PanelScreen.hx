@@ -8,7 +8,6 @@ extern class PanelScreen extends Panel implements IScreen {
 	static var AUTO_SIZE_MODE_STAGE : String;
 	static var DECELERATION_RATE_FAST : Float;
 	static var DECELERATION_RATE_NORMAL : Float;
-	static var DEFAULT_CHILD_NAME_HEADER : String;
 	static var DEFAULT_CHILD_STYLE_NAME_FOOTER : String;
 	static var DEFAULT_CHILD_STYLE_NAME_HEADER : String;
 	static var INTERACTION_MODE_MOUSE : String;

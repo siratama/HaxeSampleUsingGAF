@@ -1,30 +1,24 @@
 package feathers.controls;
 
 extern class Slider extends feathers.core.FeathersControl implements feathers.core.IFocusDisplayObject implements IDirectionalScrollBar {
-	var customMaximumTrackName : String;
 	var customMaximumTrackStyleName : String;
-	var customMinimumTrackName : String;
 	var customMinimumTrackStyleName : String;
-	var customThumbName : String;
 	var customThumbStyleName : String;
 	var direction : String;
 	var liveDragging : Bool;
 	var maximum : Float;
 	var maximumPadding : Float;
 	var maximumTrackFactory : Dynamic;
-	var maximumTrackName : String;
 	var maximumTrackProperties : Dynamic;
 	var minimum : Float;
 	var minimumPadding : Float;
 	var minimumTrackFactory : Dynamic;
-	var minimumTrackName : String;
 	var minimumTrackProperties : Dynamic;
 	var page : Float;
 	var repeatDelay : Float;
 	var showThumb : Bool;
 	var step : Float;
 	var thumbFactory : Dynamic;
-	var thumbName : String;
 	var thumbOffset : Float;
 	var thumbProperties : Dynamic;
 	var trackInteractionMode : String;
@@ -32,9 +26,6 @@ extern class Slider extends feathers.core.FeathersControl implements feathers.co
 	var trackScaleMode : String;
 	var value : Float;
 	function new() : Void;
-	static var DEFAULT_CHILD_NAME_MAXIMUM_TRACK : String;
-	static var DEFAULT_CHILD_NAME_MINIMUM_TRACK : String;
-	static var DEFAULT_CHILD_NAME_THUMB : String;
 	static var DEFAULT_CHILD_STYLE_NAME_MAXIMUM_TRACK : String;
 	static var DEFAULT_CHILD_STYLE_NAME_MINIMUM_TRACK : String;
 	static var DEFAULT_CHILD_STYLE_NAME_THUMB : String;

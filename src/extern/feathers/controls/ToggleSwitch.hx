@@ -1,11 +1,11 @@
 package feathers.controls;
 
-extern class ToggleSwitch extends feathers.core.FeathersControl implements feathers.core.IFocusDisplayObject implements feathers.core.IToggle {
-	var customOffTrackName : String;
+extern class ToggleSwitch extends feathers.core.FeathersControl implements feathers.core.ITextBaselineControl implements feathers.core.IFocusDisplayObject implements feathers.core.IToggle {
+	var baseline(default,never) : Float;
+	var customOffLabelStyleName : String;
 	var customOffTrackStyleName : String;
-	var customOnTrackName : String;
+	var customOnLabelStyleName : String;
 	var customOnTrackStyleName : String;
-	var customThumbName : String;
 	var customThumbStyleName : String;
 	var defaultLabelProperties : Dynamic;
 	var disabledLabelProperties : Dynamic;
@@ -13,25 +13,20 @@ extern class ToggleSwitch extends feathers.core.FeathersControl implements feath
 	var labelAlign : String;
 	var labelFactory : Dynamic;
 	var offLabelFactory : Dynamic;
-	var offLabelName : String;
 	var offLabelProperties : Dynamic;
 	var offText : String;
 	var offTrackFactory : Dynamic;
-	var offTrackName : String;
 	var offTrackProperties : Dynamic;
 	var onLabelFactory : Dynamic;
-	var onLabelName : String;
 	var onLabelProperties : Dynamic;
 	var onText : String;
 	var onTrackFactory : Dynamic;
-	var onTrackName : String;
 	var onTrackProperties : Dynamic;
 	var paddingLeft : Float;
 	var paddingRight : Float;
 	var showLabels : Bool;
 	var showThumb : Bool;
 	var thumbFactory : Dynamic;
-	var thumbName : String;
 	var thumbProperties : Dynamic;
 	var toggleDuration : Float;
 	var toggleEase : Dynamic;
@@ -39,11 +34,6 @@ extern class ToggleSwitch extends feathers.core.FeathersControl implements feath
 	var trackLayoutMode : String;
 	function new() : Void;
 	function setSelectionWithAnimation(p1 : Bool) : Void;
-	static var DEFAULT_CHILD_NAME_OFF_LABEL : String;
-	static var DEFAULT_CHILD_NAME_OFF_TRACK : String;
-	static var DEFAULT_CHILD_NAME_ON_LABEL : String;
-	static var DEFAULT_CHILD_NAME_ON_TRACK : String;
-	static var DEFAULT_CHILD_NAME_THUMB : String;
 	static var DEFAULT_CHILD_STYLE_NAME_OFF_LABEL : String;
 	static var DEFAULT_CHILD_STYLE_NAME_OFF_TRACK : String;
 	static var DEFAULT_CHILD_STYLE_NAME_ON_LABEL : String;

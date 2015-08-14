@@ -1,23 +1,19 @@
 package feathers.controls;
 
 extern class TabBar extends feathers.core.FeathersControl implements feathers.core.IFocusDisplayObject {
-	var customFirstTabName : String;
+	var baseline(default,never) : Float;
 	var customFirstTabStyleName : String;
-	var customLastTabName : String;
 	var customLastTabStyleName : String;
-	var customTabName : String;
 	var customTabStyleName : String;
 	var dataProvider : feathers.data.ListCollection;
 	var direction : String;
 	var distributeTabSizes : Bool;
 	var firstGap : Float;
 	var firstTabFactory : Dynamic;
-	var firstTabName : String;
 	var gap : Float;
 	var horizontalAlign : String;
 	var lastGap : Float;
 	var lastTabFactory : Dynamic;
-	var lastTabName : String;
 	var padding : Float;
 	var paddingBottom : Float;
 	var paddingLeft : Float;
@@ -27,11 +23,9 @@ extern class TabBar extends feathers.core.FeathersControl implements feathers.co
 	var selectedItem : Dynamic;
 	var tabFactory : Dynamic;
 	var tabInitializer : Dynamic;
-	var tabName : String;
 	var tabProperties : Dynamic;
 	var verticalAlign : String;
 	function new() : Void;
-	static var DEFAULT_CHILD_NAME_TAB : String;
 	static var DEFAULT_CHILD_STYLE_NAME_TAB : String;
 	static var DIRECTION_HORIZONTAL : String;
 	static var DIRECTION_VERTICAL : String;

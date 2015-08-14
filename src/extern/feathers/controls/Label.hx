@@ -14,8 +14,6 @@ extern class Label extends feathers.core.FeathersControl implements feathers.cor
 	var textRendererProperties : Dynamic;
 	var wordWrap : Bool;
 	function new() : Void;
-	static var ALTERNATE_NAME_DETAIL : String;
-	static var ALTERNATE_NAME_HEADING : String;
 	static var ALTERNATE_STYLE_NAME_DETAIL : String;
 	static var ALTERNATE_STYLE_NAME_HEADING : String;
 	static var globalStyleProvider : feathers.skins.IStyleProvider;

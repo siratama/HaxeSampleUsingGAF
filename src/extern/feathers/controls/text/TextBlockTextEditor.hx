@@ -19,4 +19,5 @@ extern class TextBlockTextEditor extends TextBlockTextRenderer implements feathe
 	static var TEXT_ALIGN_CENTER : String;
 	static var TEXT_ALIGN_LEFT : String;
 	static var TEXT_ALIGN_RIGHT : String;
+	static var globalStyleProvider : feathers.skins.IStyleProvider;
 }

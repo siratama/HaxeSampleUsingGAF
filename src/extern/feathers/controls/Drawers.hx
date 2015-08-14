@@ -25,6 +25,7 @@ extern class Drawers extends feathers.core.FeathersControl {
 	var minimumDrawerThrowVelocity : Float;
 	var openGesture : String;
 	var openGestureEdgeSize : Float;
+	var openMode : String;
 	var openOrCloseDuration : Float;
 	var openOrCloseEase : Dynamic;
 	var overlaySkin : starling.display.DisplayObject;
@@ -48,5 +49,7 @@ extern class Drawers extends feathers.core.FeathersControl {
 	static var OPEN_GESTURE_DRAG_CONTENT : String;
 	static var OPEN_GESTURE_DRAG_CONTENT_EDGE : String;
 	static var OPEN_GESTURE_NONE : String;
+	static var OPEN_MODE_ABOVE : String;
+	static var OPEN_MODE_BELOW : String;
 	static var globalStyleProvider : feathers.skins.IStyleProvider;
 }

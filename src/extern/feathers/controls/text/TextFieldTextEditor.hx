@@ -1,6 +1,6 @@
 package feathers.controls.text;
 
-extern class TextFieldTextEditor extends feathers.core.FeathersControl implements feathers.core.INativeFocusOwner implements feathers.core.ITextEditor {
+extern class TextFieldTextEditor extends feathers.core.FeathersControl implements feathers.core.IStateObserver implements feathers.core.INativeFocusOwner implements feathers.core.ITextEditor {
 	var alwaysShowSelection : Bool;
 	var antiAliasType : String;
 	var background : Bool;
@@ -22,6 +22,7 @@ extern class TextFieldTextEditor extends feathers.core.FeathersControl implement
 	var selectionEndIndex(default,never) : Int;
 	var setTouchFocusOnEndedPhase(default,never) : Bool;
 	var sharpness : Float;
+	var stateContext : feathers.core.IStateContext;
 	var text : String;
 	var textFormat : flash.text.TextFormat;
 	var thickness : Float;
@@ -34,4 +35,6 @@ extern class TextFieldTextEditor extends feathers.core.FeathersControl implement
 	function measureText(?p1 : flash.geom.Point) : flash.geom.Point;
 	function selectRange(p1 : Int, p2 : Int) : Void;
 	function setFocus(?p1 : flash.geom.Point) : Void;
+	function setTextFormatForState(p1 : String, p2 : flash.text.TextFormat) : Void;
+	static var globalStyleProvider : feathers.skins.IStyleProvider;
 }

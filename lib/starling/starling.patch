@@ -2,7 +2,3 @@
 -starling.core.Starling.contentScaleFactor 
 -starling.core.Starling.context 
 -starling.core.Starling.juggler 
--starling.core.RenderSupport.clear 
--starling.core.Starling.contentScaleFactor 
--starling.core.Starling.context 
--starling.core.Starling.juggler 

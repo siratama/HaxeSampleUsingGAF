@@ -16,4 +16,5 @@ extern class BitmapFontTextEditor extends BitmapFontTextRenderer implements feat
 	function clearFocus() : Void;
 	function selectRange(p1 : Int, p2 : Int) : Void;
 	function setFocus(?p1 : flash.geom.Point) : Void;
+	static var globalStyleProvider : feathers.skins.IStyleProvider;
 }

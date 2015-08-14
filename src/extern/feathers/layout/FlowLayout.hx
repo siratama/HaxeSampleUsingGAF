@@ -1,10 +1,12 @@
 package feathers.layout;
 
 extern class FlowLayout extends starling.events.EventDispatcher implements IVariableVirtualLayout {
+	var firstHorizontalGap : Float;
 	var gap : Float;
 	var hasVariableItemDimensions : Bool;
 	var horizontalAlign : String;
 	var horizontalGap : Float;
+	var lastHorizontalGap : Float;
 	var padding : Float;
 	var paddingBottom : Float;
 	var paddingLeft : Float;

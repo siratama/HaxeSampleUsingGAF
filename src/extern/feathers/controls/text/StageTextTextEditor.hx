@@ -29,4 +29,5 @@ extern class StageTextTextEditor extends feathers.core.FeathersControl implement
 	function measureText(?p1 : flash.geom.Point) : flash.geom.Point;
 	function selectRange(p1 : Int, p2 : Int) : Void;
 	function setFocus(?p1 : flash.geom.Point) : Void;
+	static var globalStyleProvider : feathers.skins.IStyleProvider;
 }

@@ -2,7 +2,6 @@ package feathers.controls;
 
 extern class SimpleScrollBar extends feathers.core.FeathersControl implements IDirectionalScrollBar {
 	var clampToRange : Bool;
-	var customThumbName : String;
 	var customThumbStyleName : String;
 	var direction : String;
 	var liveDragging : Bool;
@@ -17,11 +16,9 @@ extern class SimpleScrollBar extends feathers.core.FeathersControl implements ID
 	var repeatDelay : Float;
 	var step : Float;
 	var thumbFactory : Dynamic;
-	var thumbName : String;
 	var thumbProperties : Dynamic;
 	var value : Float;
 	function new() : Void;
-	static var DEFAULT_CHILD_NAME_THUMB : String;
 	static var DEFAULT_CHILD_STYLE_NAME_THUMB : String;
 	static var DIRECTION_HORIZONTAL : String;
 	static var DIRECTION_VERTICAL : String;

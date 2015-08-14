@@ -1,6 +1,6 @@
 package feathers.controls.text;
 
-extern class TextFieldTextEditorViewPort extends TextFieldTextEditor implements ITextEditorViewPort {
+extern class StageTextTextEditorViewPort extends StageTextTextEditor implements ITextEditorViewPort {
 	var contentX(default,never) : Float;
 	var contentY(default,never) : Float;
 	var horizontalScrollPosition : Float;

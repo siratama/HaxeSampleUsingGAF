@@ -1,6 +1,6 @@
 package feathers.controls.renderers;
 
-extern class LayoutGroupGroupedListHeaderOrFooterRenderer extends feathers.controls.LayoutGroup implements IGroupedListHeaderOrFooterRenderer {
+extern class LayoutGroupGroupedListHeaderOrFooterRenderer extends feathers.controls.LayoutGroup implements IGroupedListFooterRenderer implements IGroupedListHeaderRenderer {
 	var data : Dynamic;
 	var groupIndex : Int;
 	var isSelected : Bool;

@@ -22,6 +22,7 @@ extern class FeathersEventType {
 	static var SCROLL_START : String;
 	static var SOFT_KEYBOARD_ACTIVATE : String;
 	static var SOFT_KEYBOARD_DEACTIVATE : String;
+	static var STATE_CHANGE : String;
 	static var TRANSITION_CANCEL : String;
 	static var TRANSITION_COMPLETE : String;
 	static var TRANSITION_IN_COMPLETE : String;

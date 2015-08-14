@@ -6,5 +6,6 @@ extern class CollectionEventType {
 	static var REMOVE_ITEM : String;
 	static var REPLACE_ITEM : String;
 	static var RESET : String;
+	static var UPDATE_ALL : String;
 	static var UPDATE_ITEM : String;
 }

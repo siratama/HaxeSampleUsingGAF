@@ -1,12 +1,14 @@
 package feathers.controls;
 
-extern class TextInput extends feathers.core.FeathersControl implements feathers.core.INativeFocusOwner implements feathers.core.ITextBaselineControl implements feathers.core.IFocusDisplayObject {
+extern class TextInput extends feathers.core.FeathersControl implements feathers.core.IStateContext implements feathers.core.INativeFocusOwner implements feathers.core.ITextBaselineControl {
 	var backgroundDisabledSkin : starling.display.DisplayObject;
 	var backgroundEnabledSkin : starling.display.DisplayObject;
 	var backgroundFocusedSkin : starling.display.DisplayObject;
 	var backgroundSkin : starling.display.DisplayObject;
 	var baseline(default,never) : Float;
-	var currentState : String;
+	var currentState(default,never) : String;
+	var customPromptStyleName : String;
+	var customTextEditorStyleName : String;
 	var defaultIcon : starling.display.DisplayObject;
 	var disabledIcon : starling.display.DisplayObject;
 	var displayAsPassword : Bool;
@@ -40,8 +42,9 @@ extern class TextInput extends feathers.core.FeathersControl implements feathers
 	function clearFocus() : Void;
 	function selectRange(p1 : Int, p2 : Int = -1) : Void;
 	function setFocus() : Void;
-	static var ALTERNATE_NAME_SEARCH_TEXT_INPUT : String;
 	static var ALTERNATE_STYLE_NAME_SEARCH_TEXT_INPUT : String;
+	static var DEFAULT_CHILD_STYLE_NAME_PROMPT : String;
+	static var DEFAULT_CHILD_STYLE_NAME_TEXT_EDITOR : String;
 	static var STATE_DISABLED : String;
 	static var STATE_ENABLED : String;
 	static var STATE_FOCUSED : String;

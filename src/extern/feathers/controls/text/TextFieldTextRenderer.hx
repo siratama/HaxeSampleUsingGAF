@@ -1,6 +1,6 @@
 package feathers.controls.text;
 
-extern class TextFieldTextRenderer extends feathers.core.FeathersControl implements feathers.core.ITextRenderer {
+extern class TextFieldTextRenderer extends feathers.core.FeathersControl implements feathers.core.IStateObserver implements feathers.core.ITextRenderer {
 	var antiAliasType : String;
 	var background : Bool;
 	var backgroundColor : UInt;
@@ -15,8 +15,10 @@ extern class TextFieldTextRenderer extends feathers.core.FeathersControl impleme
 	var isHTML : Bool;
 	var maxTextureDimensions : Int;
 	var nativeFilters : Array<Dynamic>;
+	var selectedTextFormat : flash.text.TextFormat;
 	var sharpness : Float;
 	var snapToPixels : Bool;
+	var stateContext : feathers.core.IStateContext;
 	var styleSheet : flash.text.StyleSheet;
 	var text : String;
 	var textFormat : flash.text.TextFormat;
@@ -27,5 +29,6 @@ extern class TextFieldTextRenderer extends feathers.core.FeathersControl impleme
 	var wordWrap : Bool;
 	function new() : Void;
 	function measureText(?p1 : flash.geom.Point) : flash.geom.Point;
+	function setTextFormatForState(p1 : String, p2 : flash.text.TextFormat) : Void;
 	static var globalStyleProvider : feathers.skins.IStyleProvider;
 }
