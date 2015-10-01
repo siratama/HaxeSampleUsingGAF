@@ -25,7 +25,6 @@ class Main
 	private var zipLoader:ZipLoader;
 	private var zipConverter:ZipConverter;
 
-	private var layout:AbstractGAFMovieClip;
 	private var player:Player;
 
 	public static function main(){
@@ -101,10 +100,9 @@ class Main
 	private function initializeGame()
 	{
 		var layoutSprite = new LayoutSprite();
-		layout = new AbstractGAFMovieClip(layoutSprite);
-
 		player = new Player(gameLayer, layoutSprite.player);
 
+		/*
 		trace(layoutSprite.testTextField);
 		trace(layoutSprite.testInputTextField);
 		trace(layoutSprite.movingSquare);
@@ -114,6 +112,7 @@ class Main
 		trace(layoutSprite.etcScene.square);
 		trace(layoutSprite.etcScene.player);
 		trace(layoutSprite.etcScene.squareNest.square);
+		*/
 	}
 
 	//

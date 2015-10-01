@@ -16,7 +16,7 @@ class ZipLoader
 	public function getEvent():ZipLoaderEvent
 	{
 		var n = event;
-		event = null;
+		event = ZipLoaderEvent.NONE;
 		return n;
 	}
 

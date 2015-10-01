@@ -17,7 +17,7 @@ class ZipConverter
 	public function getEvent():ZipConverterEvent
 	{
 		var n = event;
-		event = null;
+		event = ZipConverterEvent.NONE;
 		return n;
 	}
 
